@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tower Defense Difficulty Analyzer</title>
+    <meta name="description" content="Interactive Tower Defense level designer, real-time battle animation sandbox, and asset balancing studio with pacing analytics and simulation." />
+    <meta property="og:title" content="Tower Defense Difficulty Analyzer" />
+    <meta property="og:description" content="Interactive Tower Defense level designer, real-time battle animation sandbox, and asset balancing studio with pacing analytics and simulation." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Gracefully prevent cross-origin iframe security exceptions from bubbling as uncaught errors
+      window.addEventListener('error', function(event) {
+        if (event && event.message && (
+          event.message.indexOf('cross-origin frame') !== -1 ||
+          event.message.indexOf('Blocked a frame') !== -1 ||
+          event.message.indexOf('SecurityError') !== -1
+        )) {
+          event.preventDefault();
+          if (typeof event.stopImmediatePropagation === 'function') {
+            event.stopImmediatePropagation();
+          }
+          return true;
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = '' + (event && event.reason ? event.reason : '');
+        if (
+          reason.indexOf('cross-origin frame') !== -1 ||
+          reason.indexOf('Blocked a frame') !== -1 ||
+          reason.indexOf('SecurityError') !== -1
+        ) {
+          event.preventDefault();
+          if (typeof event.stopImmediatePropagation === 'function') {
+            event.stopImmediatePropagation();
+          }
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+{
+  "name": "Tower Defense Difficulty Analyzer",
+  "description": "Interactive Tower Defense level designer, real-time battle animation sandbox, and asset balancing studio with pacing analytics and simulation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
